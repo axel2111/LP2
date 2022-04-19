@@ -7,7 +7,11 @@ public class Area {
     private String nombre ;
     private boolean activo ; 
     private ArrayList<Empleado> empleados ; 
-
+    
+    public Area(){}
+    public Area(String nombre){
+        this.nombre = nombre ;
+    }
     public int getIdArea() {
         return idArea;
     }

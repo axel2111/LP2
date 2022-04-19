@@ -21,3 +21,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/RRHHApp/nbproject/private/
+/LP2SoftRRHHModel/nbproject/private/
+/LP2SoftRRHHModel/build/
+/LP2SoftRRHHModel/dist/
+/LP2Soft/nbproject/private/
+/LP2Soft/build/
+/LP2SoftGestClientesModel/nbproject/private/
+/LP2SoftGestClientesModel/build/
+/LP2SoftGestClientesModel/dist/
+/LP2SoftLogisticaModel/nbproject/private/
+/LP2SoftLogisticaModel/build/
+/LP2SoftLogisticaModel/dist/
+/LP2Soft/dist/

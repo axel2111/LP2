@@ -4,6 +4,8 @@
  */
 package pe.edu.pucp.lp2soft.rrhh.model;
 
+import java.util.Date;
+
 /**
  *
  * @author axeli
@@ -15,6 +17,16 @@ public class Empleado extends Persona {
     private Area area ;
     private CuentaUsuario cuentaUsuario ;
 
+    public Empleado (int idPersona, String DNI, String nombre, String apellidoPaterno, char genero, Date fechaNacimiento ,String cargo, double sueldo, Area area) {
+        super(idPersona, DNI, nombre, apellidoPaterno, genero, fechaNacimiento);
+        this.cargo = cargo;
+        this.sueldo = sueldo;
+        this.area = area;
+    }
+
+    
+    
+    
     public String getCargo() {
         return cargo;
     }
