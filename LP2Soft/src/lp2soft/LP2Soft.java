@@ -77,6 +77,13 @@ public class LP2Soft {
         }else {
             System.out.println("NO se ha insertado el empleado");
         }
+        
+        
+        ArrayList<Area> areas = daoArea.listarTodas();
+        
+        for(int i = 0 ; i < areas.size() ; i++){
+            System.out.println(areas.get(i).getIdArea() + " " + areas.get(i).getNombre() + "\n");
+        }
     }
     
 }

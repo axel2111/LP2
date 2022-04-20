@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import pe.edu.pucp.lp2soft.rrhh.dao.AreaDAO;
 import pe.edu.pucp.lp2soft.rrhh.model.Area;
@@ -16,9 +17,37 @@ public class AreaMySQL implements AreaDAO{
     private Connection con ; 
     private Statement st ;
     private ResultSet rs ; 
+    private PreparedStatement ps ;
     @Override
     public ArrayList<Area> listarTodas() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Area> areas = new ArrayList<>() ; 
+        //int resultado = 0 ; 
+        try{
+            //REGISTRAMOS DRIVER DE CONECCION ; 
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion ;
+            con = DriverManager.getConnection("jdbc:mysql://database-lp2.cdwk0pjnvpcl.us-east-1.rds.amazonaws.com:3306/lp2","admin","lp220221") ;
+            
+            st = con.createStatement(); 
+            String sql = "SELECT * FROM area WHERE activo = 1" ;
+            rs = st.executeQuery(sql) ; 
+            
+            while(rs.next()){
+                Area area = new Area() ; 
+                area.setIdArea(rs.getInt("id_area"));
+                area.setNombre(rs.getString("nombre"));
+                area.setActivo(true);
+                areas.add(area); 
+            }
+            
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();} catch(Exception ex) {System.out.println(ex.getMessage());}
+        }
+        
+        return areas ; 
     }
 
     @Override
