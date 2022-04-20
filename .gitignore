@@ -34,3 +34,7 @@ hs_err_pid*
 /LP2SoftLogisticaModel/build/
 /LP2SoftLogisticaModel/dist/
 /LP2Soft/dist/
+/LP2SoftRRHHController/nbproject/private/
+!/LP2SoftRRHHController/src/pe/edu/pucp/lp2soft/rrhh/lib/mysql-connector-java-8.0.28.jar
+/LP2SoftRRHHController/build/
+/LP2SoftRRHHController/dist/

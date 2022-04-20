@@ -10,8 +10,12 @@ import java.util.ArrayList;
 import pe.edu.pucp.lp2soft.almacen.model.Producto;
 import pe.edu.pucp.lp2soft.gestclientes.model.Categoria;
 import pe.edu.pucp.lp2soft.gestclientes.model.Cliente;
+import pe.edu.pucp.lp2soft.rrhh.dao.AreaDAO;
+import pe.edu.pucp.lp2soft.rrhh.dao.EmpleadoDAO;
 import pe.edu.pucp.lp2soft.rrhh.model.Area;
 import pe.edu.pucp.lp2soft.rrhh.model.Empleado;
+import pe.edu.pucp.lp2soft.rrhh.mysql.AreaMySQL;
+import pe.edu.pucp.lp2soft.rrhh.mysql.EmpleadoMySQL;
 import pe.edu.pucp.lp2soft.ventas.model.LineaOrdenVenta;
 import pe.edu.pucp.lp2soft.ventas.model.OrdenVenta;
 
@@ -31,7 +35,7 @@ public class LP2Soft {
         OrdenVenta venta1 = new OrdenVenta(1,sdf.parse("13-04-2022"));
         
         Cliente cliente1 = new Cliente(3000.00 , Categoria.Clasico,1,"28732829" , "Juan" ,"Perez" , 'M' , sdf.parse("01-01-1998")) ;
-        Empleado empleado1 = new Empleado(1, "70201022", "Luis", "Ramirez", 'F', sdf.parse("01-01-1966"), "Vendedor", 2000.00, new Area("ventas"));
+        Empleado empleado1 = new Empleado(1, "70201022", "Luis", "Ramirez", 'M', sdf.parse("01-01-1966"), "Vendedor", 2000.00, new Area("ventas"));
         
         
         venta1.setEmpleado(empleado1) ;
@@ -52,7 +56,27 @@ public class LP2Soft {
         String reporte = venta1.devolverReporte();
         
         System.out.println(reporte); 
+        //Crear un area 
+        Area area1 = new Area("CONTABILIDAD") ;
+        //CREAMOS UN DAO DE CONEXION
+        AreaDAO daoArea = new AreaMySQL() ; 
+        //INsertamos en la Base de datos ; 
+        int resultado = daoArea.insertar(area1);
+        if (resultado == 1 ){
+            System.out.println("Se ha insertado correctamente el area");
+        }else {
+            System.out.println("NO se ha insertado el area");
+        }
+        empleado1.setArea(area1);
+        EmpleadoDAO daoEmpleado = new EmpleadoMySQL() ;
+        // insertamos el empleado 
         
+        int resultado2 = daoEmpleado.insertar(empleado1) ;
+        if (resultado2 == 1 ){
+            System.out.println("Se ha insertado correctamente el empleado");
+        }else {
+            System.out.println("NO se ha insertado el empleado");
+        }
     }
     
 }
