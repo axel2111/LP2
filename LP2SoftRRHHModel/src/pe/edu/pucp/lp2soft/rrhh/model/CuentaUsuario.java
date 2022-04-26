@@ -6,6 +6,12 @@ public class CuentaUsuario {
     private String password ;
     private boolean activo ; 
     private Empleado empleado ; 
+
+    public CuentaUsuario(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+    
     
 
     public int getIdCuentaUsuario() {

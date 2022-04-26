@@ -12,5 +12,5 @@ public interface AreaDAO {
     int insertar (Area area);
     int modificar (Area area );
     int eliminar (int idArea );
-    Area listarPorId (int idArea );
+    Area buscarPorId (int idArea );
 }

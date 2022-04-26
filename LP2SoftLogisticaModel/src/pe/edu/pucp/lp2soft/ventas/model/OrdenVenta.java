@@ -85,7 +85,7 @@ public class OrdenVenta {
     }
 
   
-    public void calcularTotalYSubtotales(){
+    public void calcularTotalySubtotales(){
         this.total = 0 ;
         for(LineaOrdenVenta lov:lineasOrdenVenta){
             total = total + lov.calcularSubtotal(); 

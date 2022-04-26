@@ -8,7 +8,7 @@ public class Cliente extends Persona{
     private double lineaCredito ; 
     private Categoria categoria ; 
 
-    public Cliente(double lineaCredito, Categoria categoria, int idPersona, String DNI, String nombre, String apellidoPaterno, char genero, Date fechaNacimiento) {
+    public Cliente(int idPersona, String DNI, String nombre, String apellidoPaterno, char genero, Date fechaNacimiento,double lineaCredito, Categoria categoria) {
         super(idPersona, DNI, nombre, apellidoPaterno, genero, fechaNacimiento);
         this.lineaCredito = lineaCredito;
         this.categoria = categoria;

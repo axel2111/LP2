@@ -10,7 +10,7 @@ public class LineaOrdenVenta {
     private double subtotal ; 
     private boolean activo   ;
 
-    public LineaOrdenVenta(int cantidad, Producto producto) {
+    public LineaOrdenVenta(Producto producto , int cantidad) {
         this.cantidad = cantidad;
         this.producto = producto;
     }
