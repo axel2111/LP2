@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB1919BE-0CAE-40BA-8281-ED1FD1309DD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LP2Soft</RootNamespace>
+    <AssemblyName>LP2Soft</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Estado.cs" />
+    <Compile Include="frmBusquedaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaClientes.designer.cs">
+      <DependentUpon>frmBusquedaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaEmpleados.Designer.cs">
+      <DependentUpon>frmBusquedaEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaAreas.Designer.cs">
+      <DependentUpon>frmBusquedaAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaEmpleados2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaEmpleados2.Designer.cs">
+      <DependentUpon>frmBusquedaEmpleados2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaOrdenesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaOrdenesVenta.designer.cs">
+      <DependentUpon>frmBusquedaOrdenesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaProducto.designer.cs">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatosEmpleado.Designer.cs">
+      <DependentUpon>frmDatosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarEmpleados.Designer.cs">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarOrdenesVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarOrdenesVenta.designer.cs">
+      <DependentUpon>frmGestionarOrdenesVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBusquedaClientes.resx">
+      <DependentUpon>frmBusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaEmpleados.resx">
+      <DependentUpon>frmBusquedaEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaAreas.resx">
+      <DependentUpon>frmBusquedaAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaEmpleados2.resx">
+      <DependentUpon>frmBusquedaEmpleados2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaOrdenesVenta.resx">
+      <DependentUpon>frmBusquedaOrdenesVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaProducto.resx">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatosEmpleado.resx">
+      <DependentUpon>frmDatosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarEmpleados.resx">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarOrdenesVenta.resx">
+      <DependentUpon>frmGestionarOrdenesVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LP2SoftGestClientesController\LP2SoftGestClientesController.csproj">
+      <Project>{7a557e9c-c70e-49f7-a222-d844fa9da060}</Project>
+      <Name>LP2SoftGestClientesController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2SoftGestClientesModel\LP2SoftGestClientesModel.csproj">
+      <Project>{bdce02f1-043c-42cb-8983-480f40eb0395}</Project>
+      <Name>LP2SoftGestClientesModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2SoftLogisticaController\LP2SoftLogisticaController.csproj">
+      <Project>{7849ea00-7420-4c75-918a-d7d3866584d1}</Project>
+      <Name>LP2SoftLogisticaController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2SoftLogisticaModel\LP2SoftLogisticaModel.csproj">
+      <Project>{ab98f45d-792e-47b3-9e48-7837c3c38bd1}</Project>
+      <Name>LP2SoftLogisticaModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2SoftRRHHController\LP2SoftRRHHController.csproj">
+      <Project>{459a26fc-28c3-4c39-826d-464924bac23a}</Project>
+      <Name>LP2SoftRRHHController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2SoftRRHHModel\LP2SoftRRHHModel.csproj">
+      <Project>{a90b292a-4f8f-494f-ac0e-1064ee59360b}</Project>
+      <Name>LP2SoftRRHHModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-office-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cactus_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listar_empleados-70.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

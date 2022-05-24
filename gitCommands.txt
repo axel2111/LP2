@@ -7,7 +7,7 @@ git pull -> Traer los cambios al local del repositorio en la nube
 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
 
 admin
-lp2202221
+lp220221
 hostname: database-lp2.cdwk0pjnvpcl.us-east-1.rds.amazonaws.com
 DATA ACCESS OBJECT : DAO
 

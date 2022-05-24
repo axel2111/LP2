@@ -41,3 +41,12 @@ hs_err_pid*
 /LP2SoftDBManager/nbproject/private/
 /LP2SoftDBManager/build/
 /LP2SoftDBManager/dist/
+
+#GIT ignore para trabjaar proyectos de Visual Studio
+
+*.suo
+[Db]ebug/
+[Rr]elease/
+*.exe
+*.dll
+!/ProyectosNET/LP2Soft/MySql.Data.dll
